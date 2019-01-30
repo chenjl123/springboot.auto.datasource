@@ -1,0 +1,21 @@
+server:
+  port: 9011
+
+#配置多数据源
+spring:
+  datasource:
+    order: 
+      driverClassName: com.mysql.jdbc.Driver 
+      url: jdbc:mysql://127.0.0.1:3306/order?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8
+      username: root
+      password: root
+    msg:
+      driverClassName: com.mysql.jdbc.Driver 
+      url: jdbc:mysql://127.0.0.1:3306/msg?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8
+      username: root
+      password: root
+  http: 
+    encoding: 
+      force: true
+      charset: UTF-8
+      enabled: true

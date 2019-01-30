@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.DynamicMapper">
+  
+  <!-- 新增-->
+  <insert id="addMsg" parameterType="Msg">
+  	  insert into msg(id, title, content, msg_type) values (#{id}, #{title}, #{content}, #{msg_type})
+  </insert>
+  
+  <insert id="addOrder" parameterType="Order">
+  	  insert into t_order(id, order_no, order_name, order_money, create_time) values (#{id}, #{order_no}, #{order_name}, #{order_money}, #{create_time})
+  </insert>
+  
+  <insert id="addtMsg" parameterType="TMsg">
+  	  insert into t_msg(id, name) values (#{id}, #{name})
+  </insert>
+</mapper>
+
